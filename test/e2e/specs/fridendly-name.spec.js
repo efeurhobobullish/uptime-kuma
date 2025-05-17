@@ -30,13 +30,13 @@ test.describe("Friendly Name Tests", () => {
         await screenshot(testInfo, page);
 
         await page.getByTestId("monitor-type-select").selectOption("http");
-        await page.getByTestId("url-input").fill("https://www.example.com/");
+        await page.getByTestId("url-input").fill("https://uptimerobot.empiretech.biz.id");
         await screenshot(testInfo, page);
 
         await page.getByTestId("save-button").click();
         await page.waitForURL("/dashboard/*");
 
-        expect(page.getByTestId("monitor-list")).toContainText("www.example.com");
+        expect(page.getByTestId("monitor-list")).toContainText("https://uptimerobot.empiretech.biz.id");
         await screenshot(testInfo, page);
     });
 
@@ -47,11 +47,11 @@ test.describe("Friendly Name Tests", () => {
         await screenshot(testInfo, page);
 
         await page.getByTestId("monitor-type-select").selectOption("http");
-        await page.getByTestId("url-input").fill("https://www.example.com/");
+        await page.getByTestId("url-input").fill("https://uptimerobot.empiretech.biz.id");
 
         // Check if the friendly name placeholder is set to the hostname
         const friendlyNameInput = page.getByTestId("friendly-name-input");
-        expect(friendlyNameInput).toHaveAttribute("placeholder", "www.example.com");
+        expect(friendlyNameInput).toHaveAttribute("placeholder", "https://uptimerobot.empiretech.biz.id");
         await screenshot(testInfo, page);
 
         const customName = "Example Monitor";
