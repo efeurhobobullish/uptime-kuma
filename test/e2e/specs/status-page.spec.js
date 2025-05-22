@@ -12,8 +12,8 @@ test.describe("Status Page", () => {
         const monitorName = "Monitor for Status Page";
         const tagName = "Client";
         const tagValue = "Acme Inc";
-        const monitorUrl = "https://uptimerobot.empiretech.biz.id/status";
-        const monitorCustomUrl = "https://uptimerobot.empiretech.biz.id";
+        const monitorUrl = "https://empire-tech-uptimerobot.koyeb.app/status";
+        const monitorCustomUrl = "https://empire-tech-uptimerobot.koyeb.app";
 
         // Status Page
         const footerText = "This is footer text.";
